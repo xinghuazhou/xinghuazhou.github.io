@@ -151,6 +151,224 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/12/article-2021-05-12/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/running-boy.jpg">
+      <meta itemprop="name" content="谁能告诉我">
+      <meta itemprop="description" content="你们有多少人,在对付我这么一个可怜的老头子?">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿尔贝的归隐时光">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/12/article-2021-05-12/" class="post-title-link" itemprop="url">傅立叶变换及其性质</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-05-12 08:17:20" itemprop="dateCreated datePublished" datetime="2021-05-12T08:17:20+08:00">2021-05-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-05-15 10:46:25" itemprop="dateModified" datetime="2021-05-15T10:46:25+08:00">2021-05-15</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="傅立叶变换定义"><a href="#傅立叶变换定义" class="headerlink" title="傅立叶变换定义"></a>傅立叶变换定义</h1><p>适用范围：非周期函数<br>变换定义：$ F(\omega) = \int_{-\infty}^{+\infty}f(t)e^{-j \omega t}dt $<br>前提条件：</p>
+<ul>
+<li>通常称之为狄利克雷条件，保证在连续点傅立叶逆变换的值等于原函数，不连续点的值等于左右极限的平均值</li>
+<li>原函数绝对可积，即$ \int_{-\infty}^{+\infty}|f(t)|dt &lt; \infty $</li>
+<li>任意有限区间内只有有限个断点且断点值为有限值</li>
+<li>任意有限区间内只有有限个极大极小值</li>
+</ul>
+<h1 id="傅立叶逆变换定义"><a href="#傅立叶逆变换定义" class="headerlink" title="傅立叶逆变换定义"></a>傅立叶逆变换定义</h1><p>$ f(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}F(\omega)e^{j \omega t}dw $</p>
+<h1 id="傅立叶变换的性质"><a href="#傅立叶变换的性质" class="headerlink" title="傅立叶变换的性质"></a>傅立叶变换的性质</h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th align="left">性质名称</th>
+<th align="left">f(t)</th>
+<th align="left">F($\omega$)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td align="left">折叠性</td>
+<td align="left">$ f(-t) $</td>
+<td align="left">$ F(-\omega) $</td>
+</tr>
+<tr>
+<td>2</td>
+<td align="left">对称性</td>
+<td align="left">$ F(t)(一般函数) $</td>
+<td align="left">$ 2\pi f(-\omega) $</td>
+</tr>
+<tr>
+<td>3</td>
+<td align="left">奇偶性</td>
+<td align="left">f(t)为实、偶函数</td>
+<td align="left">F($\omega$)为实、偶函数</td>
+</tr>
+<tr>
+<td>4</td>
+<td align="left">奇偶性</td>
+<td align="left">f(t)为实、奇函数</td>
+<td align="left">F($\omega$)为虚、奇函数</td>
+</tr>
+<tr>
+<td>5</td>
+<td align="left">尺度展缩</td>
+<td align="left">f(at)</td>
+<td align="left">$ \frac{1}{a}F(\frac{\omega}{a}) $</td>
+</tr>
+<tr>
+<td>6</td>
+<td align="left">时移1</td>
+<td align="left">$ f(t-t_0) $</td>
+<td align="left">$ F(\omega)e^{-j \omega t_0}$</td>
+</tr>
+<tr>
+<td>7</td>
+<td align="left">时移2</td>
+<td align="left">$ f(at-t_0) $</td>
+<td align="left">$ \frac{1}{a}F(\frac{\omega}{a})e^{-j \frac{\omega}{a} t_0}$</td>
+</tr>
+<tr>
+<td>8</td>
+<td align="left">频移1</td>
+<td align="left">$ f(t)e^{jw_0t} $</td>
+<td align="left">$ F(\omega - \omega_0) $</td>
+</tr>
+<tr>
+<td>9</td>
+<td align="left">频移2</td>
+<td align="left">$ f(t)cos(\omega _0 t) $</td>
+<td align="left">$ \frac{1}{2}[F(\omega + \omega_0) + F(\omega - \omega_0)] $</td>
+</tr>
+<tr>
+<td>10</td>
+<td align="left">频移3</td>
+<td align="left">$ f(t)sin(\omega _0 t) $</td>
+<td align="left">$ \frac{j}{2}[F(\omega + \omega_0) - F(\omega - \omega_0)] $</td>
+</tr>
+<tr>
+<td>11</td>
+<td align="left">时域微分1</td>
+<td align="left">$ \frac{df(t)}{dt} $</td>
+<td align="left">$ j\omega F(\omega) $</td>
+</tr>
+<tr>
+<td>12</td>
+<td align="left">时域微分2</td>
+<td align="left">$ \frac{d^{n}f(t)}{dt} $</td>
+<td align="left">$ (j\omega)^n F(\omega) $</td>
+</tr>
+<tr>
+<td>13</td>
+<td align="left">频域微分1</td>
+<td align="left">$ -jtf(t) $</td>
+<td align="left">$ \frac{dF(\omega)}{dw} $</td>
+</tr>
+<tr>
+<td>14</td>
+<td align="left">频域微分2</td>
+<td align="left">$ (-jt)^{n}f(t) $</td>
+<td align="left">$ \frac{dF^{n}(\omega)}{dw} $</td>
+</tr>
+<tr>
+<td>15</td>
+<td align="left">时域积分</td>
+<td align="left">$ \int_{-\infty}^{t}f(\tau)d\tau $</td>
+<td align="left">$ \frac{F(\omega)}{j\omega} + \pi F(0) \delta(\omega) $</td>
+</tr>
+<tr>
+<td>16</td>
+<td align="left">时域卷积</td>
+<td align="left">$ f_1(t) * f_2(t) $</td>
+<td align="left">$ F_1(\omega) \cdot F_2(\omega) $</td>
+</tr>
+<tr>
+<td>17</td>
+<td align="left">频域卷积</td>
+<td align="left">$ f_1(t) \cdot f_2(t) $</td>
+<td align="left">$ \frac{1}{2\pi}F_1(\omega) * F_2(\omega) $</td>
+</tr>
+<tr>
+<td>18</td>
+<td align="left">时域抽样</td>
+<td align="left">$ \sum_{n=-\infty}^{\infty}f(t)\delta(t-nT_S) $</td>
+<td align="left">$ \frac{1}{T_S} \sum_{n=-\infty}^{\infty} F(\omega - \frac{2\pi n}{T_S}) $</td>
+</tr>
+<tr>
+<td>19</td>
+<td align="left">频域抽样</td>
+<td align="left">$ \frac{1}{\omega_S} \sum_{n=-\infty}^{\infty}f(t - \frac{2\pi n}{\omega_S} ) $</td>
+<td align="left">$ \sum_{n=-\infty}^{\infty} F(\omega)\delta(\omega - n\omega_S) $</td>
+</tr>
+<tr>
+<td>20</td>
+<td align="left">信号能量</td>
+<td align="left">$ \int_{-\infty}^{\infty} | f(t) | ^2 dt $</td>
+<td align="left">$ \frac{1}{2\pi}\int_{-\infty}^{\infty}|F(\omega)|^2d\omega $</td>
+</tr>
+<tr>
+<td>21</td>
+<td align="left">初值1</td>
+<td align="left">$ F(0) = \int_{-\infty}^{\infty}f(t)dt $</td>
+<td align="left">条件：$ \lim_{t \to \pm \infty}f(t)=0 $</td>
+</tr>
+<tr>
+<td>22</td>
+<td align="left">初值2</td>
+<td align="left">$ f(0) = \frac{1}{2\pi}\int_{-\infty}^{\infty}F(\omega)d\omega $</td>
+<td align="left">条件：$ \lim_{\omega \to \pm \infty}F(\omega)=0 $</td>
+</tr>
+</tbody></table>
+<h1 id="常用傅立叶变换公式"><a href="#常用傅立叶变换公式" class="headerlink" title="常用傅立叶变换公式"></a>常用傅立叶变换公式</h1><p> 序号 | f(t) | F($\omega$)</p>
+<ul>
+<li>| :- | :- | :-<br>1 | $ \delta(t) $ | 1<br>2 | 1 | $ 2\pi\delta(\omega) $<br>3 | U(t) | $ \pi\delta(\omega) + \frac{1}{j\omega} $<br>4 | sgn(t) | $ \frac{2}{j\omega} $<br>5 | $ e^{-at}U(t) $ | $ \frac{1}{j\omega + a} $<br>6 | $ te^{-at}U(t) $ | $ \frac{1}{(j\omega + a)^2} $<br>7 | $ G_\tau(t) $ | $ \tau Sa(\frac{\tau}{2}\omega) $<br>8 | $ Sa(\omega_0t) $ | $ \frac{\pi}{\omega_0}G_{2\omega_0}(\omega) $<br>9 | $ e^{j\omega_0t} $ | $ 2\pi\delta(\omega - \omega_0) $<br>10 | $ tU(t) $ | $ j\pi \delta’(\omega) - \frac{1}{\omega^2} $<br>11 | $ e^{-(\frac{t}{\tau}^2)} $ | $ \tau \sqrt{\pi}e^{(\tau\frac{\omega}{2})^2} $<br>18 | $ \frac{1}{t} $ | $ j \pi sgn(\omega) $<br>19 | $|t| $ | $ -\frac{2}{\omega^2} $</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/article-2021-04-11/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -176,7 +394,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-11 15:49:58 / 修改时间：16:44:49" itemprop="dateCreated datePublished" datetime="2021-05-11T15:49:58+08:00">2021-05-11</time>
+              <time title="创建时间：2021-05-11 15:49:58 / 修改时间：16:47:17" itemprop="dateCreated datePublished" datetime="2021-05-11T15:49:58+08:00">2021-05-11</time>
             </span>
 
           
@@ -190,7 +408,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="冲激函数定义"><a href="#冲激函数定义" class="headerlink" title="冲激函数定义"></a>冲激函数定义</h1><p>(1) $ \delta(t) = \begin{cases}<br>\infty &amp; t=0 \\<br>0 &amp; t \neq 0 \<br>\end{cases} $<br>(2) $ \int_{-\infty}^{\infty}\delta(\tau)d\tau = 1 $</p>
+          <h1 id="冲激函数定义"><a href="#冲激函数定义" class="headerlink" title="冲激函数定义"></a>冲激函数定义</h1><p>(1) $ \delta(t) = \begin{cases}<br>\infty &amp; t=0 \\<br>0 &amp; t \neq 0<br>\end{cases} $</p>
+<p>(2) $ \int_{-\infty}^{\infty}\delta(\tau)d\tau = 1 $</p>
 <h1 id="冲激函数性质"><a href="#冲激函数性质" class="headerlink" title="冲激函数性质"></a>冲激函数性质</h1><table>
 <thead>
 <tr>
@@ -950,7 +1169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

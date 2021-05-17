@@ -151,6 +151,270 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/16/article-2021-05-16/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/running-boy.jpg">
+      <meta itemprop="name" content="谁能告诉我">
+      <meta itemprop="description" content="你们有多少人,在对付我这么一个可怜的老头子?">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿尔贝的归隐时光">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/16/article-2021-05-16/" class="post-title-link" itemprop="url">拉普拉斯变换及其性质</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-16 14:41:27 / 修改时间：19:51:24" itemprop="dateCreated datePublished" datetime="2021-05-16T14:41:27+08:00">2021-05-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="单边拉普拉斯变换定义"><a href="#单边拉普拉斯变换定义" class="headerlink" title="单边拉普拉斯变换定义"></a>单边拉普拉斯变换定义</h1><p>适用范围：非周期函数<br>变换定义：$ F(s) = \int_{0^-}^{+\infty}f(t)e^{-st}dt $<br>其中：$ s = \sigma + j\omega $</p>
+<h1 id="单边拉普拉斯逆变换定义"><a href="#单边拉普拉斯逆变换定义" class="headerlink" title="单边拉普拉斯逆变换定义"></a>单边拉普拉斯逆变换定义</h1><p>$ f(t) = \frac{1}{2\pi j}\int_{\sigma-j\infty}^{\sigma+j\infty}F(s)e^{st}ds $</p>
+<h1 id="单边拉普拉斯变换的性质"><a href="#单边拉普拉斯变换的性质" class="headerlink" title="单边拉普拉斯变换的性质"></a>单边拉普拉斯变换的性质</h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th align="left">性质名称</th>
+<th align="left">f(t)</th>
+<th align="left">F($\omega$)</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td align="left">尺度展缩</td>
+<td align="left">f(at)</td>
+<td align="left">$ \frac{1}{a}F(\frac{s}{a}) $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>2</td>
+<td align="left">时移</td>
+<td align="left">$ f(t-t_0)U(t-t_0) $</td>
+<td align="left">$ F(s)e^{-t_0 s}$</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>3</td>
+<td align="left">频移</td>
+<td align="left">$ f(t)e^{at} $</td>
+<td align="left">$ F(s - a) $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>4</td>
+<td align="left">时域微分1</td>
+<td align="left">$ \frac{df(t)}{dt} $</td>
+<td align="left">$ sF(s) - f(0^-) $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>5</td>
+<td align="left">时域微分2</td>
+<td align="left">$ \frac{d^{n}f(t)}{dt} $</td>
+<td align="left">$ s^nF(s) - \sum_{i=1}^{i=n}s^{i-1}f^{n-i}(0^-) $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>6</td>
+<td align="left">频域微分1</td>
+<td align="left">$ (-t)f(t) $</td>
+<td align="left">$ \frac{dF(s)}{ds} $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>7</td>
+<td align="left">频域微分2</td>
+<td align="left">$ (-t)^nf(t) $</td>
+<td align="left">$ \frac{d^{n}F(s)}{ds^n} $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>8</td>
+<td align="left">时域积分</td>
+<td align="left">$ \int_{0^-}^{t}f(\tau)d\tau $</td>
+<td align="left">$ \frac{F(s)}{s} $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>9</td>
+<td align="left">频域积分</td>
+<td align="left">$ \frac{f(t)}{t} $</td>
+<td align="left">$ \int_{s}^{\infty}F(s)ds $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>10</td>
+<td align="left">时域卷积</td>
+<td align="left">$ f_1(t) * f_2(t) $</td>
+<td align="left">$ F_1(s) \cdot F_2(s) $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>11</td>
+<td align="left">频域卷积</td>
+<td align="left">$ f_1(t) \cdot f_2(t) $</td>
+<td align="left">$ \frac{1}{2\pi j}F_1(s) * F_2(s) $</td>
+<td align="left">较傅立叶变换多出j</td>
+</tr>
+<tr>
+<td>12</td>
+<td align="left">调制定理1</td>
+<td align="left">$ f(t)cos(\omega t)$</td>
+<td align="left">$ \frac{1}{2}[F(s+j\omega)+F(s-j\omega)] $</td>
+<td align="left">较傅立叶变换多出j</td>
+</tr>
+<tr>
+<td>13</td>
+<td align="left">调制定理2</td>
+<td align="left">$ f(t)sin(\omega t)$</td>
+<td align="left">$ \frac{j}{2}[F(s+j\omega)-F(s-j\omega)] $</td>
+<td align="left">较傅立叶变换多出j</td>
+</tr>
+<tr>
+<td>14</td>
+<td align="left">初值定理</td>
+<td align="left">$ f(0^+) $</td>
+<td align="left">$ \lim_{s \to \infty}sF(s) $</td>
+<td align="left">F(s)必须是真分式</td>
+</tr>
+<tr>
+<td>15</td>
+<td align="left">终值定理</td>
+<td align="left">$ f(\infty) $</td>
+<td align="left">$ \lim_{s \to 0}sF(s) $</td>
+<td align="left">f(t)必须存在终值</td>
+</tr>
+</tbody></table>
+<h1 id="常用拉普拉斯变换公式"><a href="#常用拉普拉斯变换公式" class="headerlink" title="常用拉普拉斯变换公式"></a>常用拉普拉斯变换公式</h1><table>
+<thead>
+<tr>
+<th>序号</th>
+<th align="left">f(t)U(t)</th>
+<th align="left">F($\omega$)</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td align="left">$ \delta(t) $</td>
+<td align="left">1</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>2</td>
+<td align="left">$ \delta^{n}(t) $</td>
+<td align="left">$ s^{n} $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>3</td>
+<td align="left">U(t)</td>
+<td align="left">$ \frac{1}{s} $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>4</td>
+<td align="left">t</td>
+<td align="left">$ \frac{1}{s^2} $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>5</td>
+<td align="left">$ t^n $</td>
+<td align="left">$ \frac{n!}{s^{n+1}} $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>6</td>
+<td align="left">$ e^{-at} $</td>
+<td align="left">$ \frac{1}{s+a} $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>7</td>
+<td align="left">$ te^{-at} $</td>
+<td align="left">$ \frac{1}{(s+a)^2} $</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>8</td>
+<td align="left">$ tcos(\omega t) $</td>
+<td align="left">$ \frac{s^2-\omega^2}{(s^2+\omega_2)^2} $</td>
+<td align="left">此公式无须记忆</td>
+</tr>
+<tr>
+<td>9</td>
+<td align="left">$ sh(\omega t) $</td>
+<td align="left">$ \frac{\omega}{s^2-\omega^2} $</td>
+<td align="left">此公式无须记忆</td>
+</tr>
+<tr>
+<td>10</td>
+<td align="left">$ ch(\omega t) $</td>
+<td align="left">$ \frac{s}{s^2-\omega^2} $</td>
+<td align="left">此公式无须记忆</td>
+</tr>
+<tr>
+<td>11</td>
+<td align="left">$ \sum_{n=0}^{\infty}\delta(t-nT) $</td>
+<td align="left">$ \frac{1}{1-e^{-sT}} $</td>
+<td align="left">首项为1，公比为$ e^{-sT}$</td>
+</tr>
+<tr>
+<td>12</td>
+<td align="left">$ \sum_{n=0}^{\infty}f_0(t-nT) $</td>
+<td align="left">$ \frac{F_0(s)}{1-e^{-sT}} $</td>
+<td align="left">首项为 $ F_0(s) $</td>
+</tr>
+<tr>
+<td>13</td>
+<td align="left">$ \sum_{n=0}^{\infty} [U(t-nT)-U(t-nT-\tau)],T&gt;\tau $</td>
+<td align="left">$ \frac{1-e^{-\tau}}{1-e^{-sT}} $</td>
+<td align="left">首项为 $ 1-e^{-sT}$</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/12/article-2021-05-12/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -182,7 +446,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-15 14:15:03" itemprop="dateModified" datetime="2021-05-15T14:15:03+08:00">2021-05-15</time>
+                <time title="修改时间：2021-05-16 16:00:21" itemprop="dateModified" datetime="2021-05-16T16:00:21+08:00">2021-05-16</time>
               </span>
 
           
@@ -295,7 +559,7 @@
 <td>14</td>
 <td align="left">频域微分2</td>
 <td align="left">$ (-jt)^{n}f(t) $</td>
-<td align="left">$ \frac{dF^{n}(\omega)}{dw} $</td>
+<td align="left">$ \frac{d^{n}F(\omega)}{d\omega^n} $</td>
 </tr>
 <tr>
 <td>15</td>
@@ -1239,7 +1503,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
